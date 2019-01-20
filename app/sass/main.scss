@@ -5,3 +5,108 @@
 @import "import/_fonts";
 @import "import/_variables";
 //IMPORT END
+
+div.navbar-001 {
+  div#carousel-id {
+    .carousel-indicators li {border: 1px solid #000;}
+    .carousel-indicators .active {background: #000;}
+    span.glyphicon-chevron-left {left: 4%;}
+    span.glyphicon-chevron-left::before {
+    content: '\2329';
+    @include arrow;
+  }
+  span.glyphicon-chevron-right {right: 6rem;}
+  span.glyphicon-chevron-right::before {
+    content: '\232A';
+    @include arrow;
+  }
+  }
+  div.carousel-inner {
+    div.item {
+
+      img {
+        height: 675px;
+        object-fit: cover;
+      }
+
+      div.carousel-caption {
+        right: 9%;
+        bottom: 29%;
+        h1 {
+          margin-bottom: 23px;
+          font-size: 41px;
+          color: $black;
+        }
+        h2 {
+          margin: 0 0 26px 0;
+          font-size: 26px;
+          color: $black;
+        }
+        button.btn-warning {
+          @include button;
+          background: $warning;
+        }
+        button.btn-default {
+          @include button;
+          border: 1px solid $border;
+        }
+      }
+    div.team-pos {
+      position: absolute;
+      bottom: 2%;
+    }
+    div.team {
+        // position: absolute;
+      // bottom: 2%;
+      color: $w;
+      div.team-item {
+        width: 273px;
+        margin-right: 15px;
+        padding-top: 6px;
+        padding-left: 6px;
+        padding-right: 0;
+        padding-bottom: 6px;
+        background: $team-bg;
+        border-radius: 3px;
+        transition: background 0.5s ease;
+        &:last-child {margin-right: 0;}
+        &:hover {background: $team-bg-hover;}
+        i.img-team {
+          margin-right: 10px;
+          display: inline-block;
+          width: 48px;
+          height: 50px;
+          background: url(../img/sprites-team.jpg) no-repeat 0 0;
+          &.second-img {background-position: -50px 0;}
+          &.third-img {background-position: -100px 0;}
+          &.four-img {background-position: -150px 0;}
+        }
+        p.action {
+          margin: 7px 0 0 0;
+          // margin-top: 7px;
+          font-size: 11px;
+          line-height: 10px;
+        }
+        p.text {
+          margin: 0;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 15px;
+        }
+      }
+    }
+    }
+  }
+}
+
+
+//MEDIA SCREENS START
+@media screen and (max-width: 1370px) {
+  div.navbar-001 div.carousel-inner div.item div.carousel-caption h1 {
+    text-align: center;
+  }
+  button.btn-default {
+    margin-left: 50px;
+  }
+}
+//MEDIA SCREENS END

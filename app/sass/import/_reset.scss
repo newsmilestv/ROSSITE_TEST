@@ -1,8 +1,14 @@
+//IMPORT START
+@import "import/_fonts";
+@import "import/_variables";
+//IMPORT END
 //RESET STYLE BEGINNER
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  font-family: $ops, sans-serif !important;
   font-size: 16px;
 }
 

@@ -1,0 +1,16 @@
+@mixin button {
+  padding: 17px 31px;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+@mixin arrow {
+  display: block;
+  width: 76px;
+  height: 83px;
+  padding-top: 30px;
+  // padding-left: 40px;
+  // padding-right: 26px;
+  // padding: 15px 40px 15px 25px;
+  background: $arrow;
+}
