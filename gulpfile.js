@@ -23,10 +23,10 @@ gulp.task('sass', function() {
 
 
 //SCRIPTS
-gulp.task('scripts-lib', function() {
+gulp.task('scripts', function() {
   return gulp.src([
     'node_modules/jquery/dist/jquery.js',
-    'node_modules/bootstrap/dist/js/bootstrap.js',    
+    'node_modules/bootstrap/dist/js/bootstrap.js',
    ])
   .pipe(concat('libs.min.js'))
   .pipe(uglify())
@@ -88,10 +88,10 @@ gulp.task('watch', ['browser-sync', /*'css-libs', 'scripts'*/], function() {
 });
 
 //BUILD
-gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
+gulp.task('build', ['clean', /*'img',*/ 'sass', /*'scripts'*/], function() {
   var buildCss = gulp.src([
     'app/css/main.css',
-    'app/css/libs.min.css'
+    'app/css/main.min.css'
   ])
   .pipe(gulp.dest('dist/css'));
 
