@@ -7,6 +7,23 @@
 //IMPORT END
 
 div.navbar-001 {
+  position: relative;
+  div.wrap-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $demo;
+    z-index: 1;
+      button {
+      display: block;
+      margin: 314px auto;
+      padding: 16px 24px;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+  }
   div#carousel-id {
     .carousel-indicators li {border: 1px solid #000;}
     .carousel-indicators .active {background: #000;}
@@ -139,7 +156,7 @@ div.btn-width {
    width: 100%;
  }
 }
-
+//MIN-WIDTH 768PX AND MAX-WIDTH 992PX
 @media screen and (min-width: 768px) and (max-width: 992px) {
   div.btn-width {
     float: none;
